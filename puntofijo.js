@@ -226,19 +226,22 @@ function calcular(){
                     alert("Error, debe haber por lo menos un decimal, debe ser mayor de 1.");
                 }else{
                     console.log(x0);
+                // Aqui ira su f(x) ya despejado como g(x)   
                 /**/ fn=(((-Math.pow(x0,3))+3)/(6)); //g(x) fn sera la funcion con x despejada para ello tendra que escribir la funcion ya despejada 
                 //para ello usara Math ya sea para elevar o para usar sen cos o tan    
                 /*
                 Math.pow(x0,potencia);
                 Math.cos(x0);
+                Math.E; Esta es la e de euler. se puede ver su uso en el case 1:
                 la funcion se debe escribir dos veces donde estan los /**/ /* la primera sera para tomar el primer dato, la segunda sera para comprobarlo
                 esta funcion no comprueba si tiene solucion la raiz no evalua en la derivada.
-                    */    
+                */ 
+                    
                 x0=fn;
                 redondeo(x0,dcml);
                 console.log(i," - ", resul);
         
-                /**/ fn=(((-Math.pow(x0,3))+3)/(6)); //g(x)
+                /**/ fn=(((-Math.pow(x0,3))+3)/(6)); //g(x) Modificar aqui tambien debe poner el g(x)
 
                 var flotante = parseFloat(fn); // Se convierte el numero a un flotante
                 var resultado = Math.round(flotante*Math.pow(10,dcml))/Math.pow(10,dcml); // se redondea el flotante 
