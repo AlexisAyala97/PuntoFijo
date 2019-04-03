@@ -217,11 +217,12 @@ function calcular(){
             }while(result!=resul); 
             break;
             
-            case 6:
+            case '6':
+
+                var infi;
                 // Ecuacion personalizada, aqui podra ingresar la ecuacion que usted desee comprobar.
                 var eq5 = document.getElementById("mensaje");
-                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> Para utilizar esta opcion se debe modificar el codigo fuente del archivo puntofijo.js en el case 6: o linea 220 donde se encuentrab las instruciones el codigo puede ser descargadi de la siguiente url: <a href='https://github.com/AlexisAyala97/PuntoFijo'>Codigo Fuente</a> solo precionar el boton verde que dice clone or download y descargar en zip descomprimir el archivo y modificarlo luego solo debera abrir el archivo index.html</h4></label> ";
-                
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> Para utilizar esta opcion se debe modificar el codigo fuente del archivo puntofijo.js en el case 6: o linea 220 donde se encuentrab las instruciones el codigo puede ser descargadi de la siguiente url: <a href='https://github.com/AlexisAyala97/PuntoFijo'>Codigo Fuente</a> solo precionar el boton verde que dice clone or download y descargar en zip descomprimir el archivo y modificarlo luego solo debera abrir el archivo index.html</h4></label> ";    
                 do{
                 i++;
                 
@@ -229,22 +230,19 @@ function calcular(){
                     alert("Error, debe haber por lo menos un decimal, debe ser mayor de 1.");
                 }else{
                     console.log(x0);
-                // Aqui ira su f(x) ya despejado como g(x)   
                 /**/ fn=(((-Math.pow(x0,3))+3)/(6)); //g(x) fn sera la funcion con x despejada para ello tendra que escribir la funcion ya despejada 
                 //para ello usara Math ya sea para elevar o para usar sen cos o tan    
                 /*
                 Math.pow(x0,potencia);
                 Math.cos(x0);
-                Math.E; Esta es la e de euler. se puede ver su uso en el case 1:
                 la funcion se debe escribir dos veces donde estan los /**/ /* la primera sera para tomar el primer dato, la segunda sera para comprobarlo
                 esta funcion no comprueba si tiene solucion la raiz no evalua en la derivada.
-                */ 
-                    
+                    */    
                 x0=fn;
                 redondeo(x0,dcml);
                 console.log(i," - ", resul);
         
-                /**/ fn=(((-Math.pow(x0,3))+3)/(6)); //g(x) Modificar aqui tambien debe poner el g(x)
+                /**/ fn=(((-Math.pow(x0,3))+3)/(6)); //g(x)
 
                 var flotante = parseFloat(fn); // Se convierte el numero a un flotante
                 var resultado = Math.round(flotante*Math.pow(10,dcml))/Math.pow(10,dcml); // se redondea el flotante 
@@ -253,7 +251,12 @@ function calcular(){
                 
                 var eq5 = document.getElementById("mensaje");
                 eq5.innerHTML  = "<label align='justify' style='color:black'><h4> -x<sup>3</sup>+3 / 6  raiz = "+ result+"</4></label> ";
-                
+                infi = isFinite(result);
+                if(infi == false){
+                    var eq5 = document.getElementById("mensaje");
+                    eq5.innerHTML  = "<label align='justify' style='color:black'><h4> No tiene solución !!</h4></label> ";
+                    break;
+                }
                 tab=document.getElementById("contenido");
                 tab.innerHTML+= "<tr> <th scope='row'>"+i+"</th>"+
                 "<td>"+resul+"</td></tr>";
@@ -262,6 +265,11 @@ function calcular(){
                 }
                 
             }while(result!=resul); 
+                console.log(infi); 
+                
+                var eq5 = document.getElementById("mensaje");
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4>raiz = "+result+"</h4></label> ";
+                
             break;
         }
     }
