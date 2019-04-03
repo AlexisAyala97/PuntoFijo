@@ -77,6 +77,7 @@ function calcular(){
             break;
     
             case '2':
+                var infi;
             do{
                 i++;
                 
@@ -95,15 +96,9 @@ function calcular(){
                 var resultado = Math.round(flotante*Math.pow(10,dcml))/Math.pow(10,dcml); // se redondea el flotante 
                 var result = resultado;
                 console.log(result);
-                var infi = isFinite(result);    
+                infi = isFinite(result);    
                 console.log(infi);    
-                if(infi == false){
-                    var eq5 = document.getElementById("mensaje");
-                    eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 No tiene solución !!</h4></label> ";
-                }else{
-                var eq5 = document.getElementById("mensaje");
-                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 raiz = "+result+"</h4></label> ";
-                }
+                
                 tab=document.getElementById("contenido");
                 tab.innerHTML+= "<tr> <th scope='row'>"+i+"</th>"+
                 "<td>"+resul+"</td></tr>";
@@ -111,7 +106,14 @@ function calcular(){
                 n++;
                 }
                 
-            }while(result!=resul);      
+            }while(result!=resul);  
+                if(infi == false){
+                    var eq5 = document.getElementById("mensaje");
+                    eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 No tiene solución !!</h4></label> ";
+                }else{
+                var eq5 = document.getElementById("mensaje");
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 raiz = "+result+"</h4></label> ";
+                }
             break;
 
             case '3':
