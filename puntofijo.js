@@ -97,12 +97,12 @@ function calcular(){
                 console.log(result);
                 var infi = isFinite(result);    
                 console.log(infi);    
-                if(infi == true){
+                if(infi == false){
                     var eq5 = document.getElementById("mensaje");
                     eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 No tiene solución !!</h4></label> ";
                 }else{
                 var eq5 = document.getElementById("mensaje");
-                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 tiene solución</h4></label> ";
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 raiz = "+result+"</h4></label> ";
                 }
                 tab=document.getElementById("contenido");
                 tab.innerHTML+= "<tr> <th scope='row'>"+i+"</th>"+
