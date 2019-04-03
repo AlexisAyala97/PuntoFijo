@@ -96,7 +96,7 @@ function calcular(){
                 console.log(result);
 
                 var eq5 = document.getElementById("mensaje");
-                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> 3x<sup>2</sup>-3 No tiene solución</h4></label> ";
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> x<sup>3</sup>-3x+1 No tiene solución</h4></label> ";
         
                 tab=document.getElementById("contenido");
                 tab.innerHTML+= "<tr> <th scope='row'>"+i+"</th>"+
@@ -129,7 +129,7 @@ function calcular(){
                 console.log(result);
 
                 var eq5 = document.getElementById("mensaje");
-                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> Cos(X) </h4></label> ";
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> Cos(X) raiz = "+ result+" </h4></label> ";
         
                 tab=document.getElementById("contenido");
                 tab.innerHTML+= "<tr> <th scope='row'>"+i+"</th>"+
