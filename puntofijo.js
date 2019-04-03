@@ -219,6 +219,9 @@ function calcular(){
             
             case 6:
                 // Ecuacion personalizada, aqui podra ingresar la ecuacion que usted desee comprobar.
+                var eq5 = document.getElementById("mensaje");
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> Para utilizar esta opcion se debe modificar el codigo fuente del archivo puntofijo.js en el case 6: o linea 220 donde se encuentrab las instruciones el codigo puede ser descargadi de la siguiente url: <a href='https://github.com/AlexisAyala97/PuntoFijo'>Codigo Fuente</a> solo precionar el boton verde que dice clone or download y descargar en zip descomprimir el archivo y modificarlo luego solo debera abrir el archivo index.html</h4></label> ";
+                
                 do{
                 i++;
                 
