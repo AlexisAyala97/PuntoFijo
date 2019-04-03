@@ -47,7 +47,7 @@ function calcular(){
                 i++;
                 
                 if(dcml<=0){
-                    alert("Error, debe haber por lo menos un deciaml, debe ser mayor de 1.");
+                    alert("Error, debe haber por lo menos un decimal, debe ser mayor de 1.");
                 }else{
         
                 fn=(2-(Math.pow(Math.E,-x0))); // Derivada de la ecuacion que se va a resolver
@@ -80,7 +80,7 @@ function calcular(){
                 i++;
                 
                 if(dcml<=0){
-                    alert("Error, debe haber por lo menos un deciaml, debe ser mayor de 1.");
+                    alert("Error, debe haber por lo menos un decimal, debe ser mayor de 1.");
                 }else{
                     console.log(x0);
                 fn=(3*(Math.pow(x0,2))-3); //derivada de la Ecuacion que se va a resolver
@@ -96,7 +96,7 @@ function calcular(){
                 console.log(result);
 
                 var eq5 = document.getElementById("mensaje");
-                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> 3x<sup>2</sup>-3</h4></label> ";
+                eq5.innerHTML  = "<label align='justify' style='color:black'><h4> 3x<sup>2</sup>-3 No tiene solución</h4></label> ";
         
                 tab=document.getElementById("contenido");
                 tab.innerHTML+= "<tr> <th scope='row'>"+i+"</th>"+
@@ -113,7 +113,7 @@ function calcular(){
                 i++;
                 
                 if(dcml<=0){
-                    alert("Error, debe haber por lo menos un deciaml, debe ser mayor de 1.");
+                    alert("Error, debe haber por lo menos un decimal, debe ser mayor de 1.");
                 }else{
                     console.log(x0);
                 fn=(Math.cos(x0)); //derivada de la Ecuacion que se va a resolver
@@ -147,7 +147,7 @@ function calcular(){
                 i++;
                 
                 if(dcml<=0){
-                    alert("Error, debe haber por lo menos un deciaml, debe ser mayor de 1.");
+                    alert("Error, debe haber por lo menos un decimal, debe ser mayor de 1.");
                 }else{
                     console.log(x0);
                 fn=(Math.pow(Math.E,-x0)); //derivada de la Ecuacion que se va a resolver
@@ -180,7 +180,7 @@ function calcular(){
                 i++;
                 
                 if(dcml<=0){
-                    alert("Error, debe haber por lo menos un deciaml, debe ser mayor de 1.");
+                    alert("Error, debe haber por lo menos un decimal, debe ser mayor de 1.");
                 }else{
                     console.log(x0);
                 fn=(((-Math.pow(x0,3))+3)/(6)); //derivada de la Ecuacion que se va a resolver
